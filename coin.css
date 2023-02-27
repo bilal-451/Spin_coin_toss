@@ -1,0 +1,91 @@
+body{
+    background-color: aqua;
+    background-image: url("https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105__340.png");
+}
+.container{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&w=600");
+    justify-content: center;
+    margin:0 auto;
+    margin-top:50px;
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+.toss-count{
+    font-size: 20px;
+    text-align: center;
+    margin-right:30px;
+    font-weight: bold;
+    transform: translateY(10%);
+}
+@keyframes spin-heads{
+    0%{
+        transform: rotatex(0);
+    }
+    100%{
+        transform:rotateX(2160deg);
+    }
+}
+@keyframes spin-tails{
+    0%{
+        transform: rotatex(0);
+    }
+    100%{
+        transform:rotateX(1980deg);
+    }
+}
+.heads-count{
+    margin-top:55px;
+}
+
+.coin-toss{
+    width:300px;
+    height: 150px;
+    margin:50px auto;
+    margin-right:25px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.coin-toss img{
+    width: 150px;
+    position:absolute;
+    transform:translate(20%,0%);
+    
+}
+.Tails{
+    transform: rotateY(180deg);
+    
+
+}
+.Tails img{
+    transform: rotate(180deg);
+    margin-left: 120px;
+    
+}
+.heads,.Tails{
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+   
+        
+}
+#toss-coin,#reset{
+    width:120px;
+    height:50px;
+    border-radius: 5px;
+    font-size:20px;
+    font-weight: bold;
+    cursor:pointer;
+    color:rgb(201, 231, 68);
+    background-color:blue;
+}
+  
+#toss-coin{
+    margin-left: 30px;
+}
+#reset{
+    transform:translateX(70%) ;
+}
